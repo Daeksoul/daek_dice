@@ -6,8 +6,15 @@ A standalone diceroller script for FiveM, using standard Dungeons & Dragons-styl
 /roll 2d6 - Rolls x2 d6 dice.
 etc.
 
-Outputs are displayed on-ped and visible to anyone within a small radius to the player.
+Outputs are displayed on-ped and visible to anyone within a small radius to the player. Custom sound via NUI also played when rolling.
 Range can be changed in the client.lua file.
+
+Amend the number after <= to change distance sound is heard;
+```Client.lua
+   if #(coords - myCoords) <= 30.0 then
+        -- Play sound via NUI
+        PlayCustomDiceSound()
+```
 
 
 ## Installation
