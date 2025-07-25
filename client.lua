@@ -17,7 +17,7 @@ RegisterNetEvent("dice:showResult", function(sourceId, rollerName, resultString,
         -- Extract dice info and total
         local diceCount, diceSides = resultString:match("^(%d+)d(%d+)")
         local total = resultString:match("→%s*(%d+)")
-        local displayText = string.format("Dice roll: %s (%sd%s)", total or "?", diceCount or "?", diceSides or "?")
+        local displayText = string.format("Roll: %s (%sd%s)", total or "?", diceCount or "?", diceSides or "?")
 
         -- Attach text to roller's ped
         local key = tostring(sourceId)
